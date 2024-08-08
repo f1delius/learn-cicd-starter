@@ -25,7 +25,7 @@ func (cfg *apiConfig) handlerUsersCreate(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
-	apiKey, err := generateRandomSHA256Hash
+	apiKey, err := generateRandomSHA256Hash()
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "Couldn't gen apikey")
 		return
